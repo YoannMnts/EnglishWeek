@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Loop : MonoBehaviour
+public class Wen : MonoBehaviour
 {
     private int flipFlop;
     private float zoom = 2.5f;
 
-    public void ButtonLoopClick()
+    public void ButtonWenClick()
     {
         if (flipFlop == 0)
         {

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
@@ -21,15 +22,17 @@ public class Interaction : MonoBehaviour
         }
     }
     
-    public void ButtonInteractionClick()
+    public void ButtonInteractionClick(Button button)
     {
         tool.ResetTool();
         isInteraction = true;
+        tool.SetButtonDisable(button);
     }
     
-    public void ButtonScrewDriverClick()
+    public void ButtonScrewDriverClick(Button button)
     {
         tool.ResetTool();
         isScrewDriver = true;
+        tool.SetButtonDisable(button);
     }
 }

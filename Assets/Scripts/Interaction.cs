@@ -15,12 +15,12 @@ public class Interaction : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
-                if(hit.collider.CompareTag("Interact") && isInteraction)
+                if(hit.collider.CompareTag("PhoneUnderCover") && isInteraction)
                 {
                     phoneAnimation.PlayAnimationUnderPhone();
                 }
 
-                if (hit.collider.CompareTag("ScrewDriver") && isScrewDriver)
+                if (hit.collider.CompareTag("PhoneScrew") && isScrewDriver)
                 {
                     phoneAnimation.PlayAnimationScrew(hit.collider.gameObject);
                 }

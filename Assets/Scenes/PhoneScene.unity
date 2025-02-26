@@ -907,15 +907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7955931162174144070, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
-      value: ScrewDriver
+      value: PhoneScrew
       objectReference: {fileID: 0}
     - target: {fileID: -7465444079778612399, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
-      value: ScrewDriver
+      value: PhoneScrew
       objectReference: {fileID: 0}
     - target: {fileID: -268772925191751660, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
-      value: Interact
+      value: PhoneUnderCover
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_Name
@@ -923,11 +923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4937767691104970141, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
-      value: ScrewDriver
+      value: PhoneScrew
       objectReference: {fileID: 0}
     - target: {fileID: 5903547976740421585, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
-      value: ScrewDriver
+      value: PhoneScrew
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

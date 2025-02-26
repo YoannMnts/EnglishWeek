@@ -7,6 +7,7 @@ public class Interaction : MonoBehaviour
     public bool isInteraction;
     [SerializeField] private Tool tool;
     public bool isScrewDriver;
+    [SerializeField] private PhoneAnimation phoneAnimation;
 
     private void Update()
     {
@@ -16,7 +17,7 @@ public class Interaction : MonoBehaviour
             {
                 if(hit.collider.CompareTag("Interact") && isInteraction || hit.collider.CompareTag("ScrewDriver") && isScrewDriver)
                 {
-                    hit.transform.GetComponent<Animator>().enabled = true;
+                    phoneAnimation.PlayAnimation();
                 }
             }
         }

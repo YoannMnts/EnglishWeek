@@ -17,7 +17,6 @@ public class PhoneAnimation : MonoBehaviour
             if(screwObject[i] == screw)
                 screwObject[i].GetComponent<Animator>().enabled = true;
         }
-        
         currentScrewDriver++;
     }
     

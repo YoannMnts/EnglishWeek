@@ -9,7 +9,7 @@ public class PhoneAnimation : MonoBehaviour
 
     private int currentScrewDriver;
     private int currentInteraction;
-
+    
     public void PlayAnimationScrew(GameObject screw)
     {
         for (int i = 0; i < 4; i++)

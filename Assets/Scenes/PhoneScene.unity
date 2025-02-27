@@ -909,6 +909,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PhoneScrew
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: -7465444079778612399, guid: 8c3e2617e6a4b1d469238f1aab908a91, type: 3}
       propertyPath: m_TagString
       value: PhoneScrew

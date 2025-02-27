@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Glove : MonoBehaviour
 {
@@ -26,9 +27,10 @@ public class Glove : MonoBehaviour
                 transform.rotation = Quaternion.AngleAxis(roty, right) * transform.rotation;
             }
         }
-    public void ButtonGloveClick()
+    public void ButtonGloveClick(Button button)
         {
             tool.ResetTool();
             isGlove = true;
+            tool.SetButtonDisable(button);
         }
 }

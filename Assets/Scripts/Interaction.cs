@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
     public bool isInteraction;
     [SerializeField] private Tool tool;
     public bool isScrewDriver;
+    [SerializeField] private PhoneAnimation phoneAnimation;
 
     private void Update()
     {
@@ -13,23 +15,30 @@ public class Interaction : MonoBehaviour
         {
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             {
-                if(hit.collider.CompareTag("Interact") && isInteraction || hit.collider.CompareTag("ScrewDriver") && isScrewDriver)
+                if(hit.collider.CompareTag("PhoneUnderCover") && isInteraction)
                 {
-                    hit.transform.GetComponent<Animator>().enabled = true;
+                    phoneAnimation.PlayAnimationUnderPhone();
+                }
+
+                if (hit.collider.CompareTag("PhoneScrew") && isScrewDriver)
+                {
+                    phoneAnimation.PlayAnimationScrew(hit.collider.gameObject);
                 }
             }
         }
     }
     
-    public void ButtonInteractionClick()
+    public void ButtonInteractionClick(Button button)
     {
         tool.ResetTool();
         isInteraction = true;
+        tool.SetButtonDisable(button);
     }
     
-    public void ButtonScrewDriverClick()
+    public void ButtonScrewDriverClick(Button button)
     {
         tool.ResetTool();
         isScrewDriver = true;
+        tool.SetButtonDisable(button);
     }
 }

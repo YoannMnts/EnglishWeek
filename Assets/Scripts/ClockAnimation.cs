@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class ClockAnimation : MonoBehaviour
 {
-    [SerializeField] private GameObject[] screwObject, interactionObject, clockButton, underClock, hatchSide, key, hatchKey, dial;
+    [SerializeField] private GameObject[] screwObject, interactionObject, clockButton, underClock, hatchSide, key, hatchKey, dial, inputField, keySound;
     [SerializeField] private Dialog dialog;
     private int currentScrewDriver;
     private int currentInteraction;
     private bool hasKey;
     void Start()
     {
-        dialog.ShowDialog();
+        dialog.ShowDialog(0);
     }
     
     public void PlayAnimationScrew(GameObject screw)
@@ -37,7 +37,7 @@ public class ClockAnimation : MonoBehaviour
     {
         clockButton[currentInteraction].GetComponent<Animator>().enabled = true;
         underClock[currentInteraction].SetActive(false);
-        dialog.ShowDialog();
+        dialog.ShowDialog(1);
     }
 
     public void PlayAnimationHatchSide()
@@ -47,7 +47,7 @@ public class ClockAnimation : MonoBehaviour
 
     public void showInputField()
     {
-        this.gameObject.SetActive(true);
+        inputField[0].SetActive(true);
     }
     public void codeEntry(String hour)
     {
@@ -63,28 +63,29 @@ public class ClockAnimation : MonoBehaviour
             if (hour == "4751")
             {
                 PlayAnimationHatchSide();
-                dialog.ShowDialog();
             }
         }
-        this.gameObject.SetActive(false);
+        inputField[0].SetActive(false);
     }
 
     public void PlayAnimationMecanism()
     {
-        dialog.ShowDialog();
+        dialog.ShowDialog(4);
         key[currentInteraction].SetActive(true);
+        keySound[0].SetActive(true);
     }
 
     public void GetKey()
     {
         key[currentInteraction].SetActive(false);
         hasKey = true;
+        dialog.ShowDialog(5);
     }
 
     public void PlayAnimationHatchKey()
     {
         hatchKey[currentInteraction].GetComponent<Animator>().enabled = true;
-        dialog.ShowDialog();
+        dialog.ShowDialog(6);
     }
 
     public void PlayAnimationDial()
@@ -94,7 +95,7 @@ public class ClockAnimation : MonoBehaviour
 
     public void Adress()
     {
-        dialog.ShowDialog();
+        dialog.ShowDialog(7);
         SceneManager.LoadScene(2);
     }
 }

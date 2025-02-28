@@ -11,6 +11,8 @@ public class Interaction : MonoBehaviour
     [SerializeField] private ClockAnimation clockAnimation;
     [SerializeField] private Dialog dialog;
     private bool hasClickerOnBomb;
+    private bool hasAnswerPhone;
+    [SerializeField] private GameObject bombSound;
 
     private void Update()
     {
@@ -38,8 +40,9 @@ public class Interaction : MonoBehaviour
                 {
                     if (hasClickerOnBomb == false)
                     {
-                        dialog.ShowDialog();
+                        dialog.ShowDialog(2);
                         hasClickerOnBomb = true;
+                        bombSound.SetActive(true);
                     }
                     else if (hasClickerOnBomb == true)
                     {
@@ -71,7 +74,18 @@ public class Interaction : MonoBehaviour
                 {
                     clockAnimation.Adress();
                 }
-                
+
+                if (hit.collider.CompareTag("Roulette") && isInteraction)
+                {
+                    if (hasAnswerPhone == false)
+                    {
+                        dialog.ShowDialog(8);
+                    }
+                    else
+                    {
+                        phoneAnimation.PlayAnimationAnswerPhone();
+                    }
+                }
                 if(hit.collider.CompareTag("PhoneUnderCover") && isInteraction)
                 { 
                     phoneAnimation.PlayAnimationUnderPhone();
@@ -79,6 +93,16 @@ public class Interaction : MonoBehaviour
                 if (hit.collider.CompareTag("PhoneScrew") && isScrewDriver)
                 { 
                     phoneAnimation.PlayAnimationScrew(hit.collider.gameObject);
+                }
+
+                if (hit.collider.CompareTag("SliceOfMetal") && isInteraction)
+                {
+                    phoneAnimation.PlayAnimationRemoveSliceOfMetal();
+                    hasAnswerPhone = true;
+                }
+                if (hit.collider.CompareTag("Ring") && isInteraction)
+                {
+                    dialog.ShowDialog(16);
                 }
             }
         }

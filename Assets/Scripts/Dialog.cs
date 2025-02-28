@@ -7,13 +7,11 @@ public class Dialog : MonoBehaviour
 {
     [SerializeField] private GameObject imgDialog;
     [SerializeField] private Sprite[] dialogSprite;
-    private int index;
 
-    public void ShowDialog()
+    public void ShowDialog(int index)
     {
         imgDialog.GetComponent<CanvasGroup>().alpha = 1;
         imgDialog.GetComponent<Image>().sprite = dialogSprite[index];
-        index++;
         StartCoroutine(WaitUntil());
     }
 

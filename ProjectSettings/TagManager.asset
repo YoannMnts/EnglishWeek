@@ -15,6 +15,9 @@ TagManager:
   - HatchKey
   - Needle
   - Adress
+  - Roulette
+  - SliceOfMetal
+  - Ring
   layers:
   - Default
   - TransparentFX

@@ -4,11 +4,12 @@ using UnityEngine;
 public class PhoneAnimation : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] screwObject, interactionObject;
-    
+    private GameObject[] screwObject, interactionObject, sliceOfMetal,phonehHandle;
+    [SerializeField] private Dialog dialog;
 
     private int currentScrewDriver;
     private int currentInteraction;
+    private bool hasAnswer;
     
     public void PlayAnimationScrew(GameObject screw)
     {
@@ -26,5 +27,17 @@ public class PhoneAnimation : MonoBehaviour
         {
             interactionObject[currentInteraction].GetComponent<Animator>().enabled = true;
         }
+    }
+
+    public void PlayAnimationRemoveSliceOfMetal()
+    {
+        sliceOfMetal[currentInteraction].SetActive(false);
+        dialog.ShowDialog(12);
+    }
+
+    public void PlayAnimationAnswerPhone()
+    {
+        phonehHandle[currentInteraction].GetComponent<Animator>().enabled = true;
+        dialog.ShowDialog(13);
     }
 }

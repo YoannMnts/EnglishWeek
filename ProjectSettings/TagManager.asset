@@ -6,6 +6,15 @@ TagManager:
   tags:
   - PhoneUnderCover
   - PhoneScrew
+  - ClockScrew
+  - ClockHatchBack
+  - ClockButton
+  - Bomb
+  - Mecanism
+  - Key
+  - HatchKey
+  - Needle
+  - Adress
   layers:
   - Default
   - TransparentFX

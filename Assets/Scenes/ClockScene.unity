@@ -221,7 +221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &323589320
 AudioSource:
   m_ObjectHideFlags: 0
@@ -229,11 +229,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323589319}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec96316db037e984fb60dac31e08a77a, type: 3}
-  m_Resource: {fileID: 8300000, guid: ec96316db037e984fb60dac31e08a77a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04b52fe9464adb84a97a84698d100720, type: 3}
+  m_Resource: {fileID: 8300000, guid: 04b52fe9464adb84a97a84698d100720, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1470,8 +1470,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e8758871e9af48748b672d7a7121db48, type: 3}
-  m_Resource: {fileID: 8300000, guid: e8758871e9af48748b672d7a7121db48, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1a436a5f0e433df4db670d27f3cf1fda, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1a436a5f0e433df4db670d27f3cf1fda, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.04
   m_Pitch: 1
@@ -1588,7 +1588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &979526101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1596,11 +1596,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979526100}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cdda55b2891bf20428c693ceae859997, type: 3}
-  m_Resource: {fileID: 8300000, guid: cdda55b2891bf20428c693ceae859997, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4090b56fb581404180b571bcb91d1df, type: 3}
+  m_Resource: {fileID: 8300000, guid: b4090b56fb581404180b571bcb91d1df, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
